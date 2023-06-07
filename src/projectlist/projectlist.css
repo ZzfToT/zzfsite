@@ -1,0 +1,29 @@
+div.GridSectionItems {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:1rem;
+}
+
+
+.GridSectionItems div {
+    background-color: rgb(249,249,249);
+    border-radius: 5px;
+    padding: 10px 10px;
+}
+
+a.ProjectName {
+    font-size: 1.1rem;
+    display: block;
+    color:black;
+    font-weight: 500;
+}
+
+a.ProjectLink {
+    white-space: nowrap;
+    border: 1px solid #ddd;
+    color: black;
+    font-weight: 500;
+    padding: 0.5rem 0.6rem;
+    font-size: .9rem;
+    border-radius: 6px;
+}

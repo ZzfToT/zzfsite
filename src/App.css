@@ -1,16 +1,55 @@
+.App {
+  padding: 0 7rem;
+  padding-top: 3rem;
+}
+
+@media screen and (max-width:700px) {
+  .desktop-only {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width:700px) {
+  .mobile-only {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .App {
+    padding: 0 1rem;
+  }
+}
+
+
 
 h1.PageTitle {
   font-size: 3rem;
-  font-weight: 600;
+  font-weight: 700;
   white-space: wrap;
+  line-height: 1.1;
 }
 
+@media screen and (max-width: 700px) { 
+  h1.PageTitle {
+    font-size: 2.2rem;
+  } 
+}
 
 h2.SectionTitle {
   font-size: 2rem;
-  font-weight: 600;
-  overflow:hide;
+  font-weight: 700;
 }
+
+@media screen and (max-width:700px) {
+  h2.SectionTitle {
+    font-size: 1.7rem;
+    font-weight: 700;
+  }
+
+}
+
+
 
 a {
   text-decoration:none !important;

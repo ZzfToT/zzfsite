@@ -4,16 +4,6 @@ p.description {
     overflow: hidden;
 }
 
-#homepagebody {
-    margin-top: 80px;
-}
-
-@media screen and (max-width: 700px) {
-    #homepagebody {
-        margin-top:150px;
-    }
-}
-
 @media screen and (max-width: 700px) {
     p.description {
         font-size: 1rem;

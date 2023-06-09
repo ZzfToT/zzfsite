@@ -10,19 +10,18 @@ class HomePage extends Component {
   render() {
     return (
       <React.Fragment>
-        <Nav />
-        <main>
-          <div id="homepagebody">
-            <Intro/>
-            <br />
-            <br />
-            <ItemSection title="近期文章" titleright="查看所有" />
-
-            <br />
-            <br />
-            <ProjectList title="项目列表" />
-          </div>
-        </main>
+        <div id="layout">
+          <Nav />
+          <main>
+            <div className="mainbody">
+              <Intro />
+              <br /><br />
+              <ItemSection title="近期文章" titleright="查看所有" />
+              <br /><br />
+              <ProjectList title="项目列表" />
+            </div>
+          </main>
+        </div>
       </React.Fragment>
     );
   }

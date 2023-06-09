@@ -34,6 +34,8 @@
     font-size: 1.05rem;
     font-weight: 500;
     border: 2px solid transparent;
+    border-left: none;
+    border-right: none;
     gap:0.5rem;
     margin: 0 .3rem;
 }
@@ -42,6 +44,25 @@
     margin-left: -1px;
 }
 
+#navbar a.item.home:hover, #navbar a.item.home.active {
+    border-bottom-color: #5a43f1;
+} 
+
+#navbar a.item.about:hover, #navbar a.item.about.active {
+    border-bottom-color: #66ccff;
+}
+
+#navbar a.item.writing:hover, #navbar a.item.writing.active {
+    border-bottom-color: rgb(88,203,127);
+}
+
+#navbar a.item.project:hover, #navbar a.item.project.actove {
+    border-bottom-color: rgb(245,206,93);
+}
+
+#navbar a.item.record:hover, #navbar a.item.record.active {
+    border-bottom-color: #5a43f1;
+}
 
 @media screen and (max-width:700px) {
     #navbar {

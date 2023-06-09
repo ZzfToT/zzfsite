@@ -1,0 +1,88 @@
+div.writing-content-grid {
+    display: grid;
+    gap: 6rem;
+    grid-template-columns: auto 300px;
+    padding-bottom: 3rem;
+}
+
+h2.CardName {
+    font-size: .9rem;
+    font-weight: 700;
+    margin: 0 0 1rem;
+    text-transform: uppercase;
+}
+
+div.Categories {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin: 1rem 0;
+    padding: 1.5rem;
+}
+
+div.Tags {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin: 1rem 0;
+    padding: 1.5rem;
+}
+
+div.Categories a.category {
+    display: flex;
+    justify-content: space-between;
+    color: black;
+}
+
+.list .category {
+    margin: 0 -0.3rem;
+    padding: 0.1rem 0.5rem;
+}
+
+a.category>div.category-name {
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.category .category-count {
+    font-size: .9rem;
+    font-weight: 400;
+    color: #666;
+}
+
+.list .category:hover, a.category:hover .category-count {
+    color: #14ae73;
+}
+
+.Tags .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+}
+
+.tag-list .tag {
+    color: #2c2c2c;
+    background-color: #f6f6f6;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: .8rem;
+    font-weight: 400;
+    padding: .2rem .4rem;
+}
+
+.tag-list .tag:hover {
+    border-color: #14ae73;
+}
+
+
+@media screen and (max-width:700px) {
+    div.writing-content-grid {
+        display: block;
+    }
+
+    div.Categories {
+        margin-top: 2.5rem;
+    }
+
+    
+}

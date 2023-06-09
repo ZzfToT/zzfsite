@@ -9,9 +9,10 @@ class ItemSection extends Component {
           <section className="Section mt-5">
             <div className="FirstSection d-flex justify-content-between">
               <h2 className="SectionTitle">{this.props.title}</h2>
+              {this.props.titleright !== "" &&
               <a href="/">
                 <button>{this.props.titleright}</button>
-              </a>
+              </a>}
             </div>
             <br />
             <div className="SectionItems">

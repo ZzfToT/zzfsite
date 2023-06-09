@@ -4,6 +4,19 @@ import './nav.css'
 
 class Nav extends Component {
   state = {};
+
+  // componentDidMount = () => {
+  //   let navbarSection = document.getElementById("navbar")
+  //   console.log(navbarSection)
+  //   let pathname = window.location.pathname;
+  //   if (pathname === "/") 
+  //     pathname = "/home"
+  //   pathname = pathname.substring(1);
+  //   let activeItem = navbarSection.getElementsByClassName(pathname)
+  //   console.log(activeItem);
+  //   activeItem.length === 1 && activeItem[0].classList.add("active");
+  // }
+
   render() {
     return (
       <section id="navbar">
@@ -15,29 +28,29 @@ class Nav extends Component {
 
             <nav>
               <div className="nav-item-outer mobile-only">
-                <a href="#" className="home item">
+                <Link to="/" className="home item">
                   <span>Home</span>
-                </a>
+                </Link>
               </div>
               <div className="nav-item-outer">
-                <a href="#" className="about item active">
+                <Link to="/about" className="about item">
                     <span>About</span>
-                </a>
+                </Link>
               </div>
               <div className="nav-item-outer">
-                <a href="#" className="writting item active">
-                    <span>Writting</span>
-                </a>
+                <Link to="/writing" className="writing item">
+                    <span>Writing</span>
+                </Link>
               </div>
               <div className="nav-item-outer">
-                <a href="#" className="project item active">
+                <Link to="/" className="project item">
                     <span>Projects</span>
-                </a>
+                </Link>
               </div>
               <div className="nav-item-outer">
-                <a href="#" className="record item active">
+                <Link to="/" className="record item">
                     <span>Record</span>
-                </a>
+                </Link>
               </div>
             </nav>
           </div>

@@ -14,8 +14,8 @@ class Nav extends Component {
             </Link>
 
             <nav>
-              <div className="nav-item-outer">
-                <a href="#" className="home item mobile-only">
+              <div className="nav-item-outer mobile-only">
+                <a href="#" className="home item">
                   <span>Home</span>
                 </a>
               </div>

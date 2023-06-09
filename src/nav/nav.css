@@ -1,17 +1,9 @@
-@media screen and (max-width:700px) {
-    #navbar {
-        position: fixed;
-        top:0;
-        border-bottom: 1px solid #ddd;
-        padding-bottom: 1rem;
-    }
-}
-
 #navbar div.NavSection {
     flex-wrap: wrap;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap:1.25rem;
 }
 
 #navbar a.HeroName {
@@ -27,7 +19,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 1.25rem;
 }
+
+
 
 #navbar .nav-item-outer {
     display: flex;
@@ -43,17 +38,30 @@
     margin: 0 .3rem;
 }
 
-@media screen and (max-width: 700px) {
-    #navbar a.item {
-        font-size: .9rem;
-        font-weight: 500;
-
-    }
+#navbar a.item.about {
+    margin-left: -1px;
 }
 
 
-#navbar a.item.about {
-    margin-left: -1px;
+@media screen and (max-width:700px) {
+    #navbar {
+        position: fixed;
+        top:0;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+        z-index: 3;
+        background-color: rgb(238, 238, 238);
+    }
+    #navbar nav {
+        gap:0.25rem;
+        z-index: 3;
+    }
+
+    #navbar a.item {
+        font-size: .9rem;
+        font-weight: 500;
+    }
 }
 
 

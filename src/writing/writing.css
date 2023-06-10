@@ -10,20 +10,22 @@ h2.CardName {
     font-weight: 700;
     margin: 0 0 1rem;
     text-transform: uppercase;
+    color: var(--font-color-heading);
+    font-family: var(--font-family-heading);
 }
 
 div.Categories {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 6px;
+    background-color: var(--card-background-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
     margin: 1rem 0;
     padding: 1.5rem;
 }
 
 div.Tags {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 6px;
+    background-color: var(--card-background-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
     margin: 1rem 0;
     padding: 1.5rem;
 }
@@ -31,7 +33,7 @@ div.Tags {
 div.Categories a.category {
     display: flex;
     justify-content: space-between;
-    color: black;
+    color: var(--font-color-base);
 }
 
 .list .category {
@@ -61,11 +63,11 @@ a.category>div.category-name {
 }
 
 .tag-list .tag {
-    color: #2c2c2c;
-    background-color: #f6f6f6;
+    color: var(--font-color-base);
+    background-color: var(--button-background-color);
     border: 1px solid #ddd;
-    border-radius: 6px;
-    font-size: .8rem;
+    border-radius: var(--border-radius);
+    font-size: .8rem;   
     font-weight: 400;
     padding: .2rem .4rem;
 }

@@ -11,7 +11,7 @@
     text-decoration: none;
     font-size: 1.2rem;
     font-weight: 700;
-    color:black;
+    color: var(--font-family-nav);
     margin-bottom: 1.25rem;
 }
 
@@ -22,15 +22,14 @@
     gap: 1.25rem;
 }
 
-
-
 #navbar .nav-item-outer {
     display: flex;
     align-items: center;
 }
 
-#navbar a.item {
-    color: black;
+#navbar nav a.item {
+    font-family: var(--font-family-nav);
+    color: var(--font-color-heading);
     font-size: 1.05rem;
     font-weight: 500;
     border: 2px solid transparent;

@@ -18,11 +18,13 @@ h1.PageTitle {
   font-weight: 700;
   white-space: wrap;
   line-height: 1.1;
+  color: var(--font-color-heading);
 }
 
 h2.SectionTitle {
   font-size: 2rem;
   font-weight: 700;
+  color: var(--font-color-heading);
 }
 
 a {

@@ -1,12 +1,34 @@
+:root {
+  --font-color-base:#2c2c2c;
+  --font-color-muted:#666;
+  --font-color-heading:#252525;
+  --font-family-nav: -apple-system, BlinkMacSystemFont, Arial, sans-serif, "Microsoft YaHei";
+  --font-family-base: "Inter", -apple-system,BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif,  "Microsoft YaHei";
+  --font-family-heading: -apple-system, BlinkMacSystemFont, "Helvetic Neue", Arial, sans-serif, "Microsoft YaHei";
+  --font-family-monospace: Menlo, "IBM Plex Mono", Menlo, monospace;
+  --border-color: #ddd;
+  --border-radius: 6px;
+  --button-background-color:#f6f6f6;
+  --background-color: #eee;
+  --card-background-color:#f9f9f9;
+  --link: #5a43f1;
+  --post-time-color:#666;
+  --card-time-color: #999;
+  --link-hover-color:#f1f2fd;
+  --project-time-color:#666;
+}
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  color: var(--font-color-base);
+  font-family: var(--font-family-base);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(238,238,238);
+  background-color: var(--background-color);
 }
+
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

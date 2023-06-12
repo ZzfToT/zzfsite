@@ -43,7 +43,7 @@ class Nav extends Component {
                 </Link>
               </div>
               <div className="nav-item-outer">
-                <Link to="/" className="project item">
+                <Link to="/projects" className="project item">
                     <span>Projects</span>
                 </Link>
               </div>

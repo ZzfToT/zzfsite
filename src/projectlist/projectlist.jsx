@@ -6,12 +6,13 @@ class ProjectList extends Component {
   render() {
     return (
       <section className="mt-5">
+        {this.props.title &&
         <div className="GridSection d-flex justify-content-between">
           <h2 className="SectionTitle">{this.props.title}</h2>
           <a href="/">
             <button>查看所有</button>
           </a>
-        </div>
+        </div>}
         <br />
         <div className="GridSectionItems mb-5">
           <div>

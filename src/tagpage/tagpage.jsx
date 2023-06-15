@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import { useParams } from "react-router-dom";
 import SidebarContent from "../sidebar/siderbar_content";
 import Nav from "../nav/nav";
-import ArticleContent from "../article_content/article_content";
+import ArticleContent from "../article_items/article_items";
+import Categories from "../sidebar/categories";
+import Tags from "../sidebar/tags";
 
 class TagPagec extends Component {
   state = {};
@@ -16,7 +18,7 @@ class TagPagec extends Component {
               <ArticleContent
                 title={this.props.params.tagname}
               ></ArticleContent>
-              <SidebarContent />
+              <SidebarContent sidesections={[<Categories/>, <Tags/>]} />
             </div>
           </div>
         </main>

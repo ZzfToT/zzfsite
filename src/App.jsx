@@ -4,7 +4,7 @@ import Writing from './writing/writing';
 import Term from './termpage/term';
 import TagPage from './tagpage/tagpage';
 import ProjectPage from "./projectspage/projectspage";
-
+import ArticlePage from './article_page/article_page';
 import { Route, Routes } from 'react-router-dom';
 
 
@@ -19,6 +19,7 @@ function App() {
         <Route path="/record" element={<HomePage/>}></Route>
         <Route path="/categories/:category" element={<Term/>}></Route>
         <Route path="/tag/:tagname" element={<TagPage/>}></Route>
+        <Route path="post/:posname" element={<ArticlePage/>}></Route>
       </Routes>
     </div>
   );

@@ -33,11 +33,6 @@ class Nav extends Component {
                 </Link>
               </div>
               <div className="nav-item-outer">
-                <Link to="/about" className="about item">
-                    <span>About</span>
-                </Link>
-              </div>
-              <div className="nav-item-outer">
                 <Link to="/writing" className="writing item">
                     <span>Writing</span>
                 </Link>

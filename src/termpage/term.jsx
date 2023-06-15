@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import Nav from '../nav/nav';
-import ArticleContent from '../article_content/article_content';
+import ArticleContent from '../article_items/article_items';
 import SidebarContent from '../sidebar/siderbar_content';
 import { useParams } from 'react-router-dom';
+import Categories from '../sidebar/categories';
+import Tags from '../sidebar/tags';
+
 
 class Termc extends Component {
     state = {  } 
@@ -14,7 +17,7 @@ class Termc extends Component {
               <div className="mainbody">
                 <div className="writing-content-grid">
                   <ArticleContent title={this.props.params.category} />
-                  <SidebarContent />
+                  <SidebarContent sidesections={[<Categories/>, <Tags/>]}/>
                 </div>
               </div>
             </main>

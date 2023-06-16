@@ -1,0 +1,70 @@
+section.segment.post {
+    margin-top: 1.5rem;
+}
+
+.segment.post p {
+    line-height: 1.625;
+    margin-bottom: 1.25rem;
+    font-size: 1.05rem;
+    letter-spacing: -.01rem;
+}
+
+code {
+    font-size: .9rem;
+    background-color: var(--code-background-color);
+    color: var(--font-color-base);
+    font-family: var(--font-family-monospace);
+    padding: 5px 4px;
+    border-radius: 4px;
+    margin: 0 4px;
+}
+
+.segment.post pre {
+    margin: 1.5rem 0;
+}
+
+pre code.hljs {
+    font-size: .9rem;
+    tab-size: 2;
+    background-color: var(--code-background-color);
+    border-radius: 5px;
+    padding: 24px 24px;
+    margin: 0 0;
+}
+
+.segment.post a {
+    text-decoration: underline;
+}
+
+.segment.post h2 {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.4rem;
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 3.5rem 0 1rem;
+    letter-spacing: -.05rem;
+    color: var(--font-color-heading);
+}
+
+.segment.post h3 {
+    font-size: 1.8rem;
+    margin: 3.5rem 0 1rem;
+    letter-spacing: -.02rem;
+    font-weight: 500;
+}
+
+.segment.post blockquote {
+    background-color: var(--blockquote-background);
+    border: 1px solid var(--blockquote-border-color);
+    border-radius: var(--border-radius);
+    border-left-width: 6px;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    font-size: 1.05rem;
+    letter-spacing: -.01rem;
+    line-height: 1.625;
+}
+
+.segment.post blockquote>p {
+    margin: 0 0;
+}

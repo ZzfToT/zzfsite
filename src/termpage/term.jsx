@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Nav from '../nav/nav';
-import ArticleContent from '../article_items/article_items';
+import ArticleItems from '../article_items/article_items';
 import SidebarContent from '../sidebar/siderbar_content';
 import { useParams } from 'react-router-dom';
 import Categories from '../sidebar/categories';
@@ -16,7 +16,7 @@ class Termc extends Component {
             <main>
               <div className="mainbody">
                 <div className="writing-content-grid">
-                  <ArticleContent title={this.props.params.category} />
+                  <ArticleItems title={this.props.params.category} />
                   <SidebarContent sidesections={[<Categories/>, <Tags/>]}/>
                 </div>
               </div>

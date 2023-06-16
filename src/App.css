@@ -13,6 +13,13 @@
   margin-top: 80px;
 }
 
+ol, ul {
+    font-size: 1.05rem;
+    letter-spacing: -.01rem;
+    line-height: 1.625;
+    margin-bottom: 1.5rem;
+}
+
 h1.PageTitle {
   font-size: 3rem;
   font-weight: 700;
@@ -28,7 +35,7 @@ h2.SectionTitle {
 }
 
 a {
-  text-decoration: none !important;
+  text-decoration: none;
   color:var(--link);
 }
 

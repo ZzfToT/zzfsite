@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Nav from "../nav/nav";
 import ArticleItems from "../article_items/article_items";
 import SidebarContent from "../sidebar/siderbar_content";
 import './writing.css'
@@ -11,17 +10,14 @@ class Writing extends Component {
   render() {
     return (
       <React.Fragment>
-        <div id="layout">
-          <Nav />
-          <main>
-            <div className="mainbody">
-              <div className="writing-content-grid">
-                <ArticleItems title="Writing" />
-                <SidebarContent sidesections={[<Categories/>, <Tags/>]} />
-              </div>
+        <main>
+          <div className="mainbody">
+            <div className="writing-content-grid">
+              <ArticleItems title="Writing" />
+              <SidebarContent sidesections={[<Categories key="categories"/>, <Tags key="tags"/>]} />
             </div>
-          </main>
-        </div>
+          </div>
+        </main>
       </React.Fragment>
     );
   }

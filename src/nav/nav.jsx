@@ -1,21 +1,21 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import './nav.css'
+import "./nav.css";
 
 class Nav extends Component {
-  state = {};
+  state = {
+    activeElement: null,
+  };
 
-  // componentDidMount = () => {
-  //   let navbarSection = document.getElementById("navbar")
-  //   console.log(navbarSection)
-  //   let pathname = window.location.pathname;
-  //   if (pathname === "/") 
-  //     pathname = "/home"
-  //   pathname = pathname.substring(1);
-  //   let activeItem = navbarSection.getElementsByClassName(pathname)
-  //   console.log(activeItem);
-  //   activeItem.length === 1 && activeItem[0].classList.add("active");
-  // }
+  handleClickEvent = (e) => {
+    if (e.currentTarget.nodeName.toUpperCase() === "A") {
+      this.state.activeElement && this.state.activeElement.classList.remove("active");
+      e.currentTarget.classList.add("active");
+      this.setState({
+        activeElement: e.currentTarget,
+      });
+    }
+  };
 
   render() {
     return (
@@ -28,28 +28,43 @@ class Nav extends Component {
 
             <nav>
               <div className="nav-item-outer mobile-only">
-                <Link to="/" className="home item">
+                <Link
+                  to="/"
+                  className="home item"
+                  onClick={(e) => this.handleClickEvent(e)}
+                >
                   <span>Home</span>
                 </Link>
               </div>
               <div className="nav-item-outer">
-                <Link to="/writing" className="writing item">
-                    <span>Writing</span>
+                <Link
+                  to="/writing"
+                  className="writing item"
+                  onClick={e => this.handleClickEvent(e)}
+                >
+                  <span>Writing</span>
                 </Link>
               </div>
               <div className="nav-item-outer">
-                <Link to="/projects" className="project item">
-                    <span>Projects</span>
+                <Link
+                  to="/projects"
+                  className="project item"
+                  onClick={e => this.handleClickEvent(e)}
+                >
+                  <span>Projects</span>
                 </Link>
               </div>
               <div className="nav-item-outer">
-                <Link to="/" className="record item">
-                    <span>Record</span>
+                <Link
+                  to="/"
+                  className="record item"
+                  onClick={e => this.handleClickEvent(e)}
+                >
+                  <span>Record</span>
                 </Link>
               </div>
             </nav>
           </div>
-
 
           <form className="d-flex h-50" role="search">
             <input

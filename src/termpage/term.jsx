@@ -1,33 +1,28 @@
-import React, { Component } from 'react';
-import Nav from '../nav/nav';
-import ArticleItems from '../article_items/article_items';
-import SidebarContent from '../sidebar/siderbar_content';
-import { useParams } from 'react-router-dom';
-import Categories from '../sidebar/categories';
-import Tags from '../sidebar/tags';
-
+import React, { Component } from "react";
+import ArticleItems from "../article_items/article_items";
+import SidebarContent from "../sidebar/siderbar_content";
+import { useParams } from "react-router-dom";
+import Categories from "../sidebar/categories";
+import Tags from "../sidebar/tags";
 
 class Termc extends Component {
-    state = {  } 
-    render() { 
-        return (
-          <div id="layout">
-            <Nav />
-            <main>
-              <div className="mainbody">
-                <div className="writing-content-grid">
-                  <ArticleItems title={this.props.params.category} />
-                  <SidebarContent sidesections={[<Categories/>, <Tags/>]}/>
-                </div>
-              </div>
-            </main>
+  state = {};
+  render() {
+    return (
+      <main>
+        <div className="mainbody">
+          <div className="writing-content-grid">
+            <ArticleItems title={this.props.params.category} />
+            <SidebarContent sidesections={[<Categories />, <Tags />]} />
           </div>
-        );
-    }
+        </div>
+      </main>
+    );
+  }
 }
- 
-export default function Term () {
-    const params = useParams();
-    console.log(params);
-    return <Termc params={params} />
+
+export default function Term() {
+  const params = useParams();
+  console.log(params);
+  return <Termc params={params} />;
 }

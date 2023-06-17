@@ -51,7 +51,7 @@
     border-bottom-color: rgb(88,203,127);
 }
 
-#navbar a.item.project:hover, #navbar a.item.project.actove {
+#navbar a.item.project:hover, #navbar a.item.project.active {
     border-bottom-color: rgb(245,206,93);
 }
 

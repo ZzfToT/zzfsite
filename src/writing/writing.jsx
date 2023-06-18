@@ -6,7 +6,24 @@ import Categories from "../sidebar/sidebar_sections/categories";
 import Tags from "../sidebar/sidebar_sections/tags";
 
 class Writing extends Component {
-  state = {};      /*1. Jiang article list chuan gei articlecontent bi jiao hao; 2. jiang category he tag chuan gei sidebarcontent*/ 
+  state = {
+    postTimeDict:{}
+  };     
+
+  componentDidMount() {
+    
+    fetch("http://175.178.214.71:8000/zzfsite/postlistall/")
+    .then(response => response.json())
+    .then(js => this.setPostTimeList(js))
+    .catch(error => console.log(error))
+  }
+
+  setPostTimeList = (js) => {
+    js.status_code === 500 && window.history.replaceState(null, null, "/500");
+    this.setState({
+      postTimeDict: js.postTimeDict,
+    })
+  }
 
   render() {
     return (
@@ -14,8 +31,8 @@ class Writing extends Component {
         <main>
           <div className="mainbody">
             <div className="writing-content-grid">
-              <ArticleItems title="Writing" />
-              <SidebarContent sidesections={[<Categories key="categories"/>, <Tags key="tags"/>]} />
+              <ArticleItems title="Writing" postTimeDict={Object.entries(this.state.postTimeDict)} />
+              <SidebarContent sidesections={[<Categories key="categories" cates={Object.entries(this.props.categoryDict)}/>, <Tags key="tags" tags={this.props.tags} />]} />
             </div>
           </div>
         </main>
@@ -23,4 +40,5 @@ class Writing extends Component {
     );
   }
 }
+
 export default Writing;

@@ -42,7 +42,7 @@ class ArticlePageC extends Component {
                   key="postinfo"
                   time={wjr.date}
                   tags={wjr.tags}
-                  categories={wjr.categories}
+                  categories={wjr.category}
                 />,
               ]}
             />

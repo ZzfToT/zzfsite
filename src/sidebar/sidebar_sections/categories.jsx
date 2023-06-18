@@ -8,30 +8,12 @@ class Categories extends Component {
       <div className="SidebarCard Categories">
         <h2 className="CardName">Categories</h2>
         <div className="list">
-          <Link className="category">
-            <div className="category-name">JavaScript</div>
-            <div className="category-count">8</div>
-          </Link>
-          <Link className="category">
-            <div className="category-name">JavaScript</div>
-            <div className="category-count">8</div>
-          </Link>
-          <Link className="category">
-            <div className="category-name">JavaScript</div>
-            <div className="category-count">8</div>
-          </Link>
-          <Link className="category">
-            <div className="category-name">JavaScript</div>
-            <div className="category-count">8</div>
-          </Link>
-          <Link className="category">
-            <div className="category-name">JavaScript</div>
-            <div className="category-count">8</div>
-          </Link>
-          <Link className="category">
-            <div className="category-name">JavaScript</div>
-            <div className="category-count">8</div>
-          </Link>
+          {this.props.cates.map(c => {
+            return <Link className="category" key={c[0]}>
+              <div className="category-name">{c[0]}</div>
+              <div className="category-count">{c[1]}</div>
+            </Link>
+          })}
         </div>
       </div>
     );

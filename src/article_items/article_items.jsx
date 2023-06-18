@@ -4,15 +4,18 @@ import ItemSection from "../itemsection/itemsection";
 class ArticleItems extends Component {
   state = {};
   render() {
+    console.log(this.props.postTimeDict);
     return (
       <div className="article-items">
         <header>
           <h1 className="PageTitle">{this.props.title}</h1>
         </header>
-        <ItemSection title="2023" titleright="" showyear="false" />
-        <ItemSection title="2022" titleright="" showyear="false" />
-        <ItemSection title="2021" titleright="" showyear="false" />
-        <ItemSection title="2022" titleright="" showyear="false" />
+        <div className="itemsections">
+          {this.props.postTimeDict.map(pt => {
+            return <ItemSection title={pt[0]} titleright="" showyear={false} postlist={pt[1]} key={pt[0]} />
+           })
+          }
+        </div>
       </div>
     );
   }

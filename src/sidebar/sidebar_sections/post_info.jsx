@@ -16,9 +16,7 @@ class PostInfoSideSection extends Component {
             <div className="post-category">
               <h2 className="CardName">CATEGORY</h2>
               <ul>
-                {this.props.tags.map((t) => (
-                  <li key={t}><Link>{t}</Link></li>
-                ))}
+                  <li><Link>{this.props.category}</Link></li>
               </ul>
             </div>
 

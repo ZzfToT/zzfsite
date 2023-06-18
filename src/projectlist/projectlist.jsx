@@ -6,7 +6,7 @@ class ProjectList extends Component {
   state = {};
   render() {
     return (
-      <section className="mt-5">
+      <section className="mt-4">
         {this.props.title &&
         <div className="GridSection d-flex justify-content-between">
           <h2 className="SectionTitle">{this.props.title}</h2>
@@ -14,57 +14,24 @@ class ProjectList extends Component {
         </div>}
         <br />
         <div className="GridSectionItems mb-5">
-          <div>
-            <div>
-              <time>2022</time>
-              <a className="ProjectName">FlowWord</a>
-              <p>a desktop english word recite app</p>
-            </div>
-            <div className="pt-0">
-              <a href="/" className="ProjectLink">
-                demo
-              </a>
-            </div>
-          </div>
-
-          <div>
-            <div>
-              <time>2022</time>
-              <a className="ProjectName">FlowWord</a>
-              <p>a desktop english word recite app</p>
-            </div>
-            <div className="pt-0">
-              <a href="/" className="ProjectLink">
-                demo
-              </a>
-            </div>
-          </div>
-
-          <div>
-            <div>
-              <time>2022</time>
-              <a className="ProjectName">FlowWord</a>
-              <p>a desktop english word recite app</p>
-            </div>
-            <div className="pt-0">
-              <a href="/" className="ProjectLink">
-                demo
-              </a>
-            </div>
-          </div>
-
-          <div>
-            <div>
-              <time>2022</time>
-              <a className="ProjectName">FlowWord</a>
-              <p>a desktop english word recite app</p>
-            </div>
-            <div className="pt-0">
-              <a href="/" className="ProjectLink">
-                demo
-              </a>
-            </div>
-          </div>
+          {
+            this.props.projectlist.map( project => {
+              return (
+                <div key={project.id}>
+                  <div>
+                    <time>{new Date(project.created_at).getFullYear()}</time>
+                    <a className="ProjectName" href={`${project.html_url}`}>{project.name}</a>
+                    <p>{project.description}</p>
+                  </div>
+                  <div className="pt-0">
+                    <a href={`${project.html_url}`} className="ProjectLink">
+                      demo
+                    </a>
+                  </div>
+                </div>
+              );
+            })
+          }
         </div>
       </section>
     );

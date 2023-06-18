@@ -1,7 +1,7 @@
 div.GridSectionItems {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap:1rem;
+    gap:1.2rem;
 }
 
 
@@ -16,6 +16,12 @@ a.ProjectName {
     display: block;
     color: var(--font-color-heading);
     font-weight: 500;
+    margin: .1rem 0 0.5rem;
+}
+
+a.ProjectName:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
 }
 
 a.ProjectLink {

@@ -5,7 +5,7 @@ class Categories extends Component {
   state = {};
   render() {
     return (
-      <div className="Categories">
+      <div className="SidebarCard Categories">
         <h2 className="CardName">Categories</h2>
         <div className="list">
           <Link className="category">

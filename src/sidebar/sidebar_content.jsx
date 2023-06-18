@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "./sidebar.css"
 
 class SidebarContent extends Component {
     state = {  } 

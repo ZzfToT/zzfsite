@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { marked } from 'marked';
 import Markdown2Html from './markdowncvt';
-import './post.css'
 
 class ArticleContent extends Component {
   state = {};
@@ -14,7 +12,7 @@ class ArticleContent extends Component {
         </header>
         <section className="segment post">
           <div id={this.props.title}>
-            <Markdown2Html/>
+            <Markdown2Html textContent={this.props.textContent} />
           </div>
         </section>
       </div>

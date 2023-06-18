@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./projectlist.css";
 
 class ProjectList extends Component {
@@ -9,9 +10,7 @@ class ProjectList extends Component {
         {this.props.title &&
         <div className="GridSection d-flex justify-content-between">
           <h2 className="SectionTitle">{this.props.title}</h2>
-          <a href="/">
-            <button>查看所有</button>
-          </a>
+          <Link to="/projects" className="button">查看所有</Link>
         </div>}
         <br />
         <div className="GridSectionItems mb-5">

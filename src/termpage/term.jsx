@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import ArticleItems from "../article_items/article_items";
 import SidebarContent from "../sidebar/siderbar_content";
 import { useParams } from "react-router-dom";
-import Categories from "../sidebar/categories";
-import Tags from "../sidebar/tags";
+import Categories from "../sidebar/sidebar_sections/categories";
+import Tags from "../sidebar/sidebar_sections/tags";
 
 class Termc extends Component {
   state = {};

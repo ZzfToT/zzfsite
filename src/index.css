@@ -7,6 +7,7 @@
   --font-family-heading: -apple-system, BlinkMacSystemFont, "Helvetic Neue", Arial, sans-serif, "Microsoft YaHei";
   --font-family-monospace: Menlo, "IBM Plex Mono", Menlo, monospace;
   --border-color: #ddd;
+  --border-color-hover:#666;
   --border-radius: 6px;
   --button-background-color:#f6f6f6;
   --background-color: #eee;

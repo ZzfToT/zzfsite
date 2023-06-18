@@ -7,6 +7,7 @@ import ProjectPage from "./projectspage/projectspage";
 import ArticlePage from './article_page/article_page';
 import { Route, Routes } from 'react-router-dom';
 import Nav from './nav/nav';
+import ServerError from './common/server_error';
 
 function App() {
   return (
@@ -22,7 +23,8 @@ function App() {
           <Route path="/record" element={<HomePage />}></Route>
           <Route path="/categories/:category" element={<Term />}></Route>
           <Route path="/tag/:tagname" element={<TagPage />}></Route>
-          <Route path="post/:posname" element={<ArticlePage />}></Route>
+          <Route path="post/:title" element={<ArticlePage />}></Route>
+          <Route path="/500" element={<ServerError/>}></Route>
         </Routes>
       </div>
     </div>

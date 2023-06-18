@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import { useParams } from "react-router-dom";
 import SidebarContent from "../sidebar/siderbar_content";
 import ArticleContent from "../article_items/article_items";
-import Categories from "../sidebar/categories";
-import Tags from "../sidebar/tags";
+import Categories from "../sidebar/sidebar_sections/categories";
+import Tags from "../sidebar/sidebar_sections/tags";
 
 class TagPagec extends Component {
   state = {};

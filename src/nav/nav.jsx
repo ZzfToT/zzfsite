@@ -1,23 +1,12 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import "./nav.css";
 
 class Nav extends Component {
-  state = {
-    activeElement: null,
-  };
-
-  handleClickEvent = (e) => {
-    if (e.currentTarget.nodeName.toUpperCase() === "A") {
-      this.state.activeElement && this.state.activeElement.classList.remove("active");
-      e.currentTarget.classList.add("active");
-      this.setState({
-        activeElement: e.currentTarget,
-      });
-    }
-  };
-
+  state = {};
+  
   render() {
+    console.log("when render", this.props.path);
     return (
       <section id="navbar">
         <div className="NavSection">
@@ -28,40 +17,36 @@ class Nav extends Component {
 
             <nav>
               <div className="nav-item-outer mobile-only">
-                <Link
+                <NavLink
                   to="/"
-                  className="home item"
-                  onClick={(e) => this.handleClickEvent(e)}
+                  className={({ isActive }) => "home item" + (isActive ? " active" : "")}
                 >
                   <span>Home</span>
-                </Link>
+                </NavLink>
               </div>
               <div className="nav-item-outer">
-                <Link
+                <NavLink
                   to="/writing"
-                  className="writing item"
-                  onClick={e => this.handleClickEvent(e)}
+                  className={({ isActive }) => "writing item" + (isActive ? " active" : "")}
                 >
                   <span>Writing</span>
-                </Link>
+                </NavLink>
               </div>
               <div className="nav-item-outer">
-                <Link
+                <NavLink
                   to="/projects"
-                  className="project item"
-                  onClick={e => this.handleClickEvent(e)}
+                  className={({ isActive }) => "project item" + (isActive ? " active" : "")}
                 >
                   <span>Projects</span>
-                </Link>
+                </NavLink>
               </div>
               <div className="nav-item-outer">
-                <Link
-                  to="/"
-                  className="record item"
-                  onClick={e => this.handleClickEvent(e)}
+                <NavLink
+                  to="/record"
+                  className={({ isActive }) => "record item" + (isActive ? " active" : "")}
                 >
                   <span>Record</span>
-                </Link>
+                </NavLink>
               </div>
             </nav>
           </div>

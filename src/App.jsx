@@ -15,7 +15,6 @@ function App() {
   const [tagsandcates, setTagsAndCates] = useState({"categoryDict":{}, "tags":[]});
 
   useEffect(() => {
-    console.log("13123");
     fetch("http://175.178.214.71:8000/zzfsite/tagsandcates/")
       .then((response) => response.json())
       .then((js) => setTagsAndCates(js))
@@ -27,9 +26,10 @@ function App() {
     <NotFound/>:
     <div className="App container">
       <div className="layout">
-        <Nav />
+        <Nav path={window.location.pathname}/>
         <Routes>
           <Route path="/" element={<HomePage />}></Route>
+          <Route path="/home" element={<HomePage />}> </Route>
           <Route path="/about" element={<HomePage />}></Route>
           <Route path="/writing" element={<Writing tags={tagsandcates.tags} categoryDict={tagsandcates.categoryDict} />}></Route>
           <Route path="/projects" element={<ProjectPage />}></Route>

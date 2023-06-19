@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Nav from "../nav/nav";
 import "./homepage.css";
 import ItemSection from "../itemsection/itemsection";
 import ProjectList from "../projectlist/projectlist";

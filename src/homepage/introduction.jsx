@@ -16,7 +16,7 @@ class Intro extends Component {
             </header>
             <div className="col-12 col-md-4">
               <img
-                src="/images/miooi.png"
+                src="/static/images/miooi.png"
                 alt="mio"
                 style={{ maxWidth: "100%", minWidth: 200 }}
               />

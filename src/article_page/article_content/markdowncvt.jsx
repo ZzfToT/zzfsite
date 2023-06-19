@@ -5,7 +5,7 @@ import rehypeKatex from "rehype-katex";
 import remarkMath from "remark-math";
 import rehypeRaw from "rehype-raw";
 import rehypeHighlight from "rehype-highlight/lib";
-import rehypeSanitize from "rehype-sanitize";
+// import rehypeSanitize from "rehype-sanitize";
 import 'highlight.js/styles/xcode.css'
 import "katex/dist/katex.min.css"; // `rehype-katex` does not import the CSS for you
 

@@ -10,7 +10,7 @@ import './index.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename='zzfsite'>
       <App/>
     </BrowserRouter>
   </React.StrictMode>

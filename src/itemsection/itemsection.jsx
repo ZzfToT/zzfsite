@@ -5,7 +5,6 @@ import "./itemsection.css";
 class ItemSection extends Component {
   state = {};
   render() {
-    console.log(this.props.postlist);
     return (
       <section className="Section mt-5">
         <div className="FirstSection d-flex justify-content-between align-items-center">

@@ -35,6 +35,8 @@ a.category>div.category-name {
 }
 
 .list .category:hover,
+.list .category.active,
+a.category.active .category-count,
 a.category:hover .category-count {
     color: #14ae73;
 }
@@ -55,7 +57,7 @@ a.category:hover .category-count {
     padding: .2rem .4rem;
 }
 
-.tag-list .tag:hover {
+.tag-list .tag:hover, .tag-list .tag.active {
     border-color: #14ae73;
 }
 

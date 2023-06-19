@@ -8,7 +8,7 @@ import ArticlePage from "./article_page/article_page";
 import { Route, Routes } from "react-router-dom";
 import Nav from "./nav/nav";
 import ServerError from "./common/server_error";
-import { Component, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import NotFound from "./common/not_found";
 
 function App() {
@@ -33,7 +33,7 @@ function App() {
           <Route path="/writing" element={<Writing tags={tagsandcates.tags} categoryDict={tagsandcates.categoryDict} />}></Route>
           <Route path="/projects" element={<ProjectPage />}></Route>
           <Route path="/record" element={<HomePage />}></Route>
-          <Route path="/categories/:category" element={<Term tags={tagsandcates.tags} categoryDict={tagsandcates.categoryDict} />}></Route>
+          <Route path="/category/:category" element={<Term tags={tagsandcates.tags} categoryDict={tagsandcates.categoryDict} />}></Route>
           <Route path="/tag/:tagname" element={<TagPage tags={tagsandcates.tags} categoryDict={tagsandcates.categoryDict} />}></Route>
           <Route path="post/:title" element={<ArticlePage />}></Route>
           <Route path="/500" element={<ServerError />}></Route>

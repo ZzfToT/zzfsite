@@ -4,7 +4,6 @@ import ItemSection from "../itemsection/itemsection";
 class ArticleItems extends Component {
   state = {};
   render() {
-    console.log(this.props.postTimeDict);
     return (
       <div className="article-items">
         <header>

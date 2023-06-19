@@ -9,7 +9,7 @@ class Categories extends Component {
         <h2 className="CardName">Categories</h2>
         <div className="list">
           {this.props.cates.map(c => {
-            return <Link className="category" key={c[0]}>
+            return <Link className={`category ${c[0] === this.props.highlight && "active"}`} to={`/category/${c[0]}`} key={c[0]}>
               <div className="category-name">{c[0]}</div>
               <div className="category-count">{c[1]}</div>
             </Link>

@@ -8,7 +8,7 @@ class Tags extends Component {
       <div className="SidebarCard Tags">
         <h2 className="CardName">Tags</h2>
         <div className="tag-list">
-          {this.props.tags.map( t => <Link className="tag" key={t}>{t}</Link>)}
+          {this.props.tags.map( t => <Link className={`tag ${this.props.highlight===t && "active"}`} to={`/tag/${t}`} key={t}>{t}</Link>)}
         </div>
       </div>
     );

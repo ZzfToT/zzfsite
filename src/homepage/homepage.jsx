@@ -31,7 +31,6 @@ class HomePage extends Component {
   }
 
   setLatestPost = (js) => {
-    // console.log(js);
     js.status_code === 500 && window.history.replaceState(null, null, "/500");
     this.setState({
       postlist: js.postlist

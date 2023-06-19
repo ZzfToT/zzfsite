@@ -1,7 +1,7 @@
 div.writing-content-grid {
     display: grid;
     gap: 6rem;
-    grid-template-columns: auto 300px;
+    grid-template-columns: minmax(auto, calc(100% - 300px - 6rem)) 300px;
     padding-bottom: 3rem;
 }
 

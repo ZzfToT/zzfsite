@@ -15,6 +15,7 @@ function App() {
   const [tagsandcates, setTagsAndCates] = useState({"categoryDict":{}, "tags":[]});
 
   useEffect(() => {
+    console.log("13123");
     fetch("http://175.178.214.71:8000/zzfsite/tagsandcates/")
       .then((response) => response.json())
       .then((js) => setTagsAndCates(js))

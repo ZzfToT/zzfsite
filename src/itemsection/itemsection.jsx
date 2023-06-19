@@ -21,7 +21,7 @@ class ItemSection extends Component {
             this.props.postlist.map( post => {
               return (
                 <Link
-                  to="/"
+                  to={`/post/${post.title}`}
                   className="d-flex justify-content-between align-items-center mt-2"
                   key={post.title}
                 >

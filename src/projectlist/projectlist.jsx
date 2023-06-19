@@ -20,11 +20,11 @@ class ProjectList extends Component {
                 <div key={project.id}>
                   <div>
                     <time>{new Date(project.created_at).getFullYear()}</time>
-                    <a className="ProjectName" href={`${project.html_url}`}>{project.name}</a>
+                    <a className="ProjectName" href={`${project.html_url}`} target="_blank">{project.name}</a>
                     <p>{project.description}</p>
                   </div>
                   <div className="pt-0">
-                    <a href={`${project.html_url}`} className="ProjectLink">
+                    <a href={`${project.html_url}`} className="ProjectLink" target="_blank">
                       demo
                     </a>
                   </div>

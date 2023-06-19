@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import SidebarContent from "../sidebar/sidebar_content";
-import Categories from "../sidebar/sidebar_sections/categories";
-import Tags from "../sidebar/sidebar_sections/tags";
 import ArticleContent from "./article_content/article_content";
 import NotFound from "../common/not_found";
 import "./post.css";
@@ -42,7 +40,7 @@ class ArticlePageC extends Component {
                   key="postinfo"
                   time={wjr.date}
                   tags={wjr.tags}
-                  categories={wjr.category}
+                  category={wjr.category}
                 />,
               ]}
             />

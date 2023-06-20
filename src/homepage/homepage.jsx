@@ -17,9 +17,18 @@ class HomePage extends Component {
     .catch(error => console.log(error))
 
     fetch("https://api.github.com/users/ZzfToT/repos")
-    .then (response => response.json())
+    .then (response => this.handleLatestPostResponse(response))
     .then(js => this.setProjectList(js))
     .catch(error => console.log(error))
+  }
+
+  handleLatestPostResponse = (response) => {
+    if (response.ok) {
+      return response.json();
+    }
+    else {
+      return {status_code: 500};
+    }
   }
 
   setProjectList = (projectlist) => {

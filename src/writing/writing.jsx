@@ -10,12 +10,20 @@ class Writing extends Component {
     postTimeDict:{}
   };     
 
-  componentDidMount() {
-    
+  componentDidMount() { 
     fetch("http://175.178.214.71:8000/zzfsite/postlistall/")
     .then(response => response.json())
     .then(js => this.setPostTimeList(js))
     .catch(error => console.log(error))
+  }
+
+  handlePolistLIstAllResponse = (response) => {
+    if (response.ok) {
+      return response.json();
+    }
+    else {
+      return {status_code: 500};
+    }
   }
 
   setPostTimeList = (js) => {

@@ -13,9 +13,18 @@ class Termc extends Component {
 
   componentDidMount() {
     fetch(encodeURI(`http://175.178.214.71:8000/zzfsite/category/?category=${encodeURIComponent(this.props.params.category)}`))
-    .then(response => response.json())
+    .then(response => this.handleTermResonse(response))
     .then(js => this.setPostTimeList(js))
     .catch(error => console.log(error))
+  }
+
+  handleTermResonse = (response) => {
+    if (response.ok) {
+      return response.json();
+    }
+    else {
+      return {status_code: 500};
+    }
   }
 
   setPostTimeList = (js) => {

@@ -15,9 +15,18 @@ class TagPagec extends Component {
     fetch(
       `http://175.178.214.71:8000/zzfsite/tag/?tag=${encodeURIComponent(this.props.params.tagname)}`
     )
-    .then((response) => response.json())
+    .then((response) => this.handleTagResponse(response))
     .then((js) => this.setPostTimeList(js))
     .catch((error) => console.log(error));
+  }
+
+  handleTagResponse = (response) => {
+    if (response.ok) {
+      return response.json();
+    }
+    else {
+      return {status_code: 500};
+    }
   }
 
   componentDidUpdate(prevProps, prevState) {

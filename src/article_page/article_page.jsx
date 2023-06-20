@@ -15,14 +15,27 @@ class ArticlePageC extends Component {
     fetch(
       `http://175.178.214.71:8000/zzfsite/post/?title=${this.props.parmas.title}`
     )
-      .then((response) => response.json())
+      .then((response) => this.handleHttpResponse(response))
       .then((js) => this.handleJsonResponse(js))
       .catch((error) => console.log(error));
   };
 
+  handleHttpResponse = (response) => {
+    if (response.ok) {
+      return response.json();
+    }
+    else if (response.status === 404) {
+      console.log("触发404");
+      return {status_code: 404}
+    }
+    else {
+      return {status_code: 500}
+    }
+  }
+
   handleJsonResponse = (js) => {
-    js.date = new Date(js.date);
     js.status_code === 500 && window.history.replaceState(null, null, "/500");
+    js.date = new Date(js.date);
     this.setState({ writingJsonResponse: js });
   };
 

@@ -14,9 +14,18 @@ import NotFound from "./common/not_found";
 function App() {
   const [tagsandcates, setTagsAndCates] = useState({"categoryDict":{}, "tags":[]});
 
+  const handleHttpResponse = (response) => {
+    if (response.ok) {
+      return response.json();
+    } 
+    else {
+      return {status_code: 500};
+    }
+  }
+
   useEffect(() => {
     fetch("http://175.178.214.71:8000/zzfsite/tagsandcates/")
-      .then((response) => response.json())
+      .then((response) => handleHttpResponse(response))
       .then((js) => setTagsAndCates(js))
       .catch((error) => console.log(error));
   }, []);

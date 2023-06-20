@@ -6,7 +6,6 @@ class Nav extends Component {
   state = {};
   
   render() {
-    console.log("when render", this.props.path);
     return (
       <section id="navbar">
         <div className="NavSection">

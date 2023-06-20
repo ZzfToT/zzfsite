@@ -47,6 +47,7 @@ function App() {
           <Route path="/tag/:tagname" element={<TagPage tags={tagsandcates.tags} categoryDict={tagsandcates.categoryDict} />}></Route>
           <Route path="post/:title" element={<ArticlePage />}></Route>
           <Route path="/500" element={<ServerError />}></Route>
+          <Route path="/*" element={<NotFound/>}></Route>
         </Routes>
       </div>
     </div>
